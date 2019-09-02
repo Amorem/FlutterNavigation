@@ -7,3 +7,6 @@ PopupMenuButton
 
 Drawer
 ![drawer](./screenshots/drawer.png)
+
+BottomNavigationBar
+![bottom_navigation_bar](./screenshots/bottom_navigation_bar.png)

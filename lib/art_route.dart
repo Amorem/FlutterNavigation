@@ -6,6 +6,8 @@ class ArtRoute extends StatelessWidget {
 
   final String art;
 
+  static int _currentIndex = 0;
+
   void changeRoute(BuildContext context, String menuItem) {
     String image;
     switch (menuItem) {
@@ -96,6 +98,35 @@ class ArtRoute extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.lime[900],
+        currentIndex: _currentIndex,
+        onTap: (value) {
+          String _artist = ArtUtil.menuItems[value];
+          _currentIndex = value;
+          changeRoute(context, _artist);
+        },
+        items: [
+          BottomNavigationBarItem(
+            title: Text(
+              ArtUtil.CARAVAGGIO,
+            ),
+            icon: Icon(Icons.art_track),
+          ),
+          BottomNavigationBarItem(
+            title: Text(
+              ArtUtil.MONET,
+            ),
+            icon: Icon(Icons.art_track),
+          ),
+          BottomNavigationBarItem(
+            title: Text(
+              ArtUtil.VANGOGH,
+            ),
+            icon: Icon(Icons.art_track),
+          )
+        ],
       ),
     );
   }
