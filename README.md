@@ -10,3 +10,6 @@ Drawer
 
 BottomNavigationBar
 ![bottom_navigation_bar](./screenshots/bottom_navigation_bar.png)
+
+TabBar
+![tab_bar](./screenshots/tab_bar.png)
